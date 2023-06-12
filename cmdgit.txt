@@ -1,0 +1,14 @@
+pour créer nouveau projet: 
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/amensoris/ohmyfood.git
+git push -u origin main
+
+
+
+derroulement du projet :
+git add .
+git commit -m "commntaire suivant les modifs que je fais"
+git push -u origin main
