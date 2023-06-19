@@ -13,4 +13,299 @@ body {
   max-width: 1440px;
   min-width: 375px;
   margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+header .logo {
+  width: 165px;
+  height: 45px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  height: 186px;
+  padding-top: 25px;
+  gap: 20px;
+  padding-left: 25px;
+}
+@media (min-width: 720px) {
+  footer {
+    flex-direction: row-reverse;
+    box-sizing: border-box;
+    padding-right: 5%;
+    gap: 5%;
+    height: 114px;
+    padding-top: 60px;
+  }
+}
+footer h2 {
+  font-family: "shrikhand";
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+}
+footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 720px) {
+  footer .links {
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    gap: 5%;
+    width: 86%;
+  }
+}
+footer .links a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+footer .links .links__icone {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+}
+footer .links .links__icone i {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+main .index_location {
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 50px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+main .index_explorer {
+  background-color: #F6F6F6;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 15px;
+}
+main .index_explorer h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+main .index_explorer p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+main .index_explorer .explorer_btn {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  width: 220px;
+  height: 52px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding-top: 14px;
+  padding-left: 22px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: filter 1.2s ease, box-shadow 1.2s ease;
+}
+main .index_explorer .explorer_btn:hover {
+  filter: brightness(1.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+main .working {
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+main .working h2 {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+main .working span {
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #9356DC;
+  box-sizing: border-box;
+  padding-left: 6px;
+  padding-top: 3px;
+  margin-left: -15%;
+}
+main .working .choose {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F7F7F7;
+  height: 66px;
+  width: 318px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+main .working .choose p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  left: -25px;
+}
+main .working .choose i {
+  position: relative;
+  left: -10px;
+  color: #7E7E7E;
+}
+main .working .compose {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F7F7F7;
+  height: 66px;
+  width: 318px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+main .working .compose p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  left: -35px;
+}
+main .working .compose i {
+  position: relative;
+  left: -15px;
+  color: #7E7E7E;
+}
+main .working .enjoy {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F7F7F7;
+  height: 66px;
+  width: 318px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+main .working .enjoy p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  left: -28px;
+}
+main .working .enjoy i {
+  position: relative;
+  left: -10px;
+  color: #9356DC;
+}
+main .restaurants_list {
+  height: 1270px;
+  background-color: #F6F6F6;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-top: 40px;
+}
+main .restaurants_list h2 {
+  width: 100%;
+  padding-left: 45px;
+}
+main .restaurants_list .fa-regular {
+  position: relative;
+  top: -57px;
+  left: 290px;
+  font-size: 24px;
+}
+main .restaurants_list .fa-solid {
+  position: relative;
+  top: -57px;
+  left: 262px;
+  font-size: 24px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+main .restaurants_list .fa-solid:hover {
+  opacity: 1;
+}
+main .restaurants_list a {
+  display: flex;
+  flex-direction: column;
+  height: 237px;
+  width: 330px;
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+main .restaurants_list a img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 160px;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 15px;
+}
+main .restaurants_list a .text_description {
+  margin-left: 15px;
+  color: black;
+}
+main .restaurants_list a .text_description h3 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+}
+main .restaurants_list a .text_description p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
 }/*# sourceMappingURL=styles.css.map */
