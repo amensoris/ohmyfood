@@ -151,14 +151,50 @@ main .working {
   justify-content: center;
   gap: 20px;
   align-items: center;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  main .working {
+    height: 250px;
+  }
 }
 main .working h2 {
-  width: 100%;
   box-sizing: border-box;
-  padding-left: 20px;
   margin-bottom: 15px;
+  width: 325px;
+  /* for desktop*/
+  /* for desktop*/
 }
-main .working span {
+@media screen and (min-width: 1024px) {
+  main .working h2 {
+    width: 1024px;
+  }
+}
+main .working .steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  main .working .steps {
+    flex-direction: row;
+  }
+}
+main .working .steps .choose {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #F7F7F7;
+  height: 66px;
+  width: 318px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+main .working .steps .choose span {
   color: white;
   font-size: 12px;
   border-radius: 50%;
@@ -170,18 +206,7 @@ main .working span {
   padding-top: 3px;
   margin-left: -15%;
 }
-main .working .choose {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #F7F7F7;
-  height: 66px;
-  width: 318px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-}
-main .working .choose p {
+main .working .steps .choose p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -189,12 +214,12 @@ main .working .choose p {
   position: relative;
   left: -25px;
 }
-main .working .choose i {
+main .working .steps .choose i {
   position: relative;
   left: -10px;
   color: #7E7E7E;
 }
-main .working .compose {
+main .working .steps .compose {
   box-sizing: border-box;
   display: flex;
   justify-content: space-evenly;
@@ -205,7 +230,19 @@ main .working .compose {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-main .working .compose p {
+main .working .steps .compose span {
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #9356DC;
+  box-sizing: border-box;
+  padding-left: 6px;
+  padding-top: 3px;
+  margin-left: -15%;
+}
+main .working .steps .compose p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -213,12 +250,12 @@ main .working .compose p {
   position: relative;
   left: -35px;
 }
-main .working .compose i {
+main .working .steps .compose i {
   position: relative;
   left: -15px;
   color: #7E7E7E;
 }
-main .working .enjoy {
+main .working .steps .enjoy {
   box-sizing: border-box;
   display: flex;
   justify-content: space-evenly;
@@ -229,7 +266,19 @@ main .working .enjoy {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-main .working .enjoy p {
+main .working .steps .enjoy span {
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #9356DC;
+  box-sizing: border-box;
+  padding-left: 6px;
+  padding-top: 3px;
+  margin-left: -15%;
+}
+main .working .steps .enjoy p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -237,32 +286,79 @@ main .working .enjoy p {
   position: relative;
   left: -28px;
 }
-main .working .enjoy i {
+main .working .steps .enjoy i {
   position: relative;
   left: -10px;
   color: #9356DC;
 }
 main .restaurants_list {
-  height: 1270px;
+  height: 1160px;
   background-color: #F6F6F6;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
   padding-top: 40px;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  main .restaurants_list {
+    height: 650px;
+  }
 }
 main .restaurants_list h2 {
-  width: 100%;
-  padding-left: 45px;
+  width: 330px;
+  /* for desktop*/
+  /* for desktop*/
 }
-main .restaurants_list .fa-regular {
+@media screen and (min-width: 1024px) {
+  main .restaurants_list h2 {
+    width: 1024px;
+  }
+}
+main .restaurants_list .card_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  main .restaurants_list .card_list {
+    width: 1024px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px 120px;
+  }
+}
+main .restaurants_list .card_list article {
+  height: 237px;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  main .restaurants_list .card_list article {
+    width: 450px;
+  }
+}
+main .restaurants_list .card_list article .fa-regular {
   position: relative;
   top: -57px;
   left: 290px;
   font-size: 24px;
+  /* for desktop*/
+  /* for desktop*/
 }
-main .restaurants_list .fa-solid {
+@media screen and (min-width: 1024px) {
+  main .restaurants_list .card_list article .fa-regular {
+    position: relative;
+    top: -57px;
+    left: 408px;
+  }
+}
+main .restaurants_list .card_list article .fa-solid {
   position: relative;
   top: -57px;
   left: 262px;
@@ -273,11 +369,20 @@ main .restaurants_list .fa-solid {
   color: transparent;
   opacity: 0;
   transition: opacity 500ms ease;
+  /* for desktop*/
+  /* for desktop*/
 }
-main .restaurants_list .fa-solid:hover {
+@media screen and (min-width: 1024px) {
+  main .restaurants_list .card_list article .fa-solid {
+    position: relative;
+    top: -57px;
+    left: 380px;
+  }
+}
+main .restaurants_list .card_list article .fa-solid:hover {
   opacity: 1;
 }
-main .restaurants_list a {
+main .restaurants_list .card_list article a {
   display: flex;
   flex-direction: column;
   height: 237px;
@@ -285,25 +390,60 @@ main .restaurants_list a {
   background-color: white;
   border-radius: 20px;
   text-decoration: none;
+  box-sizing: border-box;
+  /* for desktop*/
+  /* for desktop*/
 }
-main .restaurants_list a img {
+@media screen and (min-width: 1024px) {
+  main .restaurants_list .card_list article a {
+    width: 450px;
+  }
+}
+main .restaurants_list .card_list article a .new {
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #008766;
+  position: relative;
+  top: -195px;
+  left: 240px;
+  width: 80px;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #99E2D0;
+  border-radius: 3px;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  main .restaurants_list .card_list article a .new {
+    position: relative;
+    top: -205px;
+    left: 353px;
+  }
+}
+main .restaurants_list .card_list article a img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 160px;
   border-radius: 20px 20px 0px 0px;
   margin-bottom: 15px;
 }
-main .restaurants_list a .text_description {
+main .restaurants_list .card_list article a .text_description {
   margin-left: 15px;
   color: black;
 }
-main .restaurants_list a .text_description h3 {
+main .restaurants_list .card_list article a .text_description h3 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
 }
-main .restaurants_list a .text_description p {
+main .restaurants_list .card_list article a .text_description p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
