@@ -1,23 +1,98 @@
+/*** variable code common to all page ***/
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
+/*** variable code common to all page ***/
 
 
 
+
+
+
+
+
+
+
+
+/*** header code common to all pages *****/
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60px;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        position: absolute;
+        left: 20px;
+        color: rgba(53, 53, 53, 1);
+    }
+
     .logo {
         width: 165px;
         height: 45px;
     }
 }
 
+/***** header code common to all pages *****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****** homepage code *******/
+
+.body_html {
+    width: 100%;
+}
+
+.home_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
 main {
+
+    width: 100%;
+
+
+    .loader {
+        background-color: #fff;
+        display: none;
+        width: 100%;
+        height: 100%;
     
+        i {
+            font-size: 10em;
+            color: #ffffff;
+            animation: spin 7 * 1s 6 ease-in-out alternate-reverse;
+        }
+        i {
+            font-size: 10em;
+            color: #ffffff;
+            animation: spin-revert  7 * 1s 6 ease-in-out alternate-reverse;
+        }
+
+        .loader-text {
+            font-family: 'Shrikhand';
+            font-size: 1.75em;
+            font-weight: 400; 
+        }
+    }
+
+
+
     .index_location {
         background-color: #EAEAEA;
         display: flex;
@@ -48,6 +123,10 @@ main {
             font-size: 24px;
             box-sizing: border-box;
             text-align: center;
+
+            @media screen and (min-width: 1024px) {
+                font-size: 40px;
+            }
         }
 
         p {
@@ -95,6 +174,7 @@ main {
         @media screen and (min-width: 1024px) {
             height: 250px;
         }
+
         /* for desktop*/
 
 
@@ -103,11 +183,16 @@ main {
             box-sizing: border-box;
             margin-bottom: 15px;
             width: 325px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
 
             /* for desktop*/
             @media screen and (min-width: 1024px) {
                 width: 1024px;
             }
+
             /* for desktop*/
 
         }
@@ -121,6 +206,7 @@ main {
             @media screen and (min-width: 1024px) {
                 flex-direction: row;
             }
+
             /* for desktop*/
 
 
@@ -250,28 +336,34 @@ main {
 
     .restaurants_list {
 
-        height: 1160px;
+        height: 1200px;
         background-color: #F6F6F6;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        gap: 18px;
+        gap: 13px;
         align-items: center;
         padding-top: 40px;
 
         /* for desktop*/
         @media screen and (min-width: 1024px) {
-            height: 650px;
+            height: 690px;
         }
+
         /* for desktop*/
 
         h2 {
             width: 330px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
 
             /* for desktop*/
             @media screen and (min-width: 1024px) {
                 width: 1024px;
             }
+
             /* for desktop*/
         }
 
@@ -287,6 +379,7 @@ main {
                 flex-wrap: wrap;
                 gap: 48px 120px;
             }
+
             /* for desktop*/
 
             article {
@@ -296,6 +389,7 @@ main {
                 @media screen and (min-width: 1024px) {
                     width: 450px;
                 }
+
                 /* for desktop*/
 
                 .fa-regular {
@@ -310,8 +404,10 @@ main {
                         top: -57px;
                         left: 408px;
                     }
+
                     /* for desktop*/
                 }
+
                 .fa-solid {
                     position: relative;
                     top: -57px;
@@ -319,7 +415,6 @@ main {
                     font-size: 24px;
                     background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
                     background-clip: text;
-                    -webkit-background-clip: text;
                     color: transparent;
                     opacity: 0;
                     transition: opacity 500ms ease;
@@ -330,6 +425,7 @@ main {
                         top: -57px;
                         left: 380px;
                     }
+
                     /* for desktop*/
 
                     &:hover {
@@ -351,6 +447,7 @@ main {
                     @media screen and (min-width: 1024px) {
                         width: 450px;
                     }
+
                     /* for desktop*/
 
                     .new {
@@ -361,7 +458,7 @@ main {
                         font-size: 14px;
                         color: #008766;
                         position: relative;
-                        top: -195px;
+                        top: -250px;
                         left: 240px;
                         width: 80px;
                         display: block;
@@ -374,9 +471,10 @@ main {
                         /* for desktop*/
                         @media screen and (min-width: 1024px) {
                             position: relative;
-                            top: -205px;
+                            top: -250px;
                             left: 353px;
                         }
+
                         /* for desktop*/
 
                     }
@@ -391,6 +489,13 @@ main {
                     .text_description {
                         margin-left: 15px;
                         color: black;
+                        position: relative;
+                        top: -18px;
+                        display: flex;
+                        flex-direction: column;
+                        height: 80px;
+                        box-sizing: border-box;
+
 
                         h3 {
                             font-family: 'Roboto';
@@ -404,6 +509,8 @@ main {
                             font-style: normal;
                             font-weight: 300;
                             font-size: 17px;
+                            position: relative;
+                            top: -30px
                         }
                     }
                 }
@@ -412,26 +519,296 @@ main {
     }
 }
 
+/****** homepage code*******/
 
 
 
 
-footer {
+
+
+
+
+
+
+
+
+
+/******** others pages code ********/
+
+.html_pages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body_alafrancaise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.alafrancaise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .presentation_pic {
+        width: 100%;
+        height: 275px;
+
+        img {
+            width: 100%;
+            height: 275px;
+            object-fit: cover;
+        }
+    }
+
+    .menu {
+        background-color: rgba(246, 246, 246, 1);
+        border-radius: 40px 40px 0px 0px;
+        padding-top: 10px;
+        width: 100%;
+        margin-top: -50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 38px;
+        height: 1250px;
+        box-sizing: border-box;
+
+        @media screen and (min-width: 1024px) {
+            width: 1024px;
+        }
+
+        h1 {
+            font-family: 'shrikhand';
+            font-style: normal;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: -120px;
+            width: 335px;
+
+            @media  (min-width: 1024px) {
+                position: relative;
+                left: -20px;
+            }
+        }
+
+        .fa-regular {
+            position: relative;
+            top: 46px;
+            left: 145px;
+            font-size: 24px;
+            width: 30px;
+
+            /* for desktop*/
+            @media screen and (min-width: 1024px) {
+                position: relative;
+                top: 50px;
+                left: 136px;
+            }
+            /* for desktop*/
+        }
+
+        .fa-solid {
+            position: relative;
+            top: -16px;
+            left: 147px;
+            font-size: 24px;
+            background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+            background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transition: opacity 500ms ease;
+            width: 35px;
+
+            /* for desktop*/
+            @media screen and (min-width: 1024px) {
+                position: relative;
+                top: -12px;
+                left: 138.5px; 
+            }
+            /* for desktop*/
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        .sub-menu {
+            box-sizing: border-box;
+            padding-left: 12px;
+            display: flex;
+            flex-direction: column;
+            
+            @media screen and (min-width: 1024px) {
+                width: 640px;
+                align-items: center;           
+            }
+
+            h2 {
+                font-family: 'roboto';
+                font-weight: 300;
+                font-size: 16px;
+                color: black;
+                border-bottom: $tertiary 3px solid;
+                height: 22px;
+                width: 44px;
+
+                @media (min-width: 1024px) {
+                    position: relative;
+                    left: -293px;
+                }
+            }
+
+            .dishes {
+
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                @media (min-width: 1024px) {
+                    width: 640px;   
+                }
+
+                .dish {
+                    background-color: white;
+                    border-radius: 15px;
+                    width: 349px;
+                    height: 70px;
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+
+                    @media (min-width:1024px) {
+                        width: 620px;
+                    }
+
+                    &:hover>.dish-confirm {
+
+                        transform: translateX(-100%);
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                        font-family: 'roboto';
+                        font-weight: 500;
+                        margin-left: 17px;
+                        margin-top: 14px;
+                    }
+
+                    p {
+                        font-family: 'roboto';
+                        font-size: 15px;
+                        font-weight: 300;
+                        position: relative;
+                        top: -30px;
+                        left: 17px;
+                    }
+
+                    .dish-confirm {
+                        width: 32px;
+                        height: 100%;
+                        background-color: $tertiary;
+                        position: relative;
+                        top: -102px;
+                        left: 350px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all 800ms ease-in-out;
+                        border: $tertiary solid 16px;
+
+                        @media screen and (min-width: 1024px) {
+                            position: relative;
+                            left: 620px;
+                        }
+
+                        .fa-circle-check {
+                            color: $tertiary;
+                            background-color: white;
+                            font-size: 24px;
+                            border-radius: 50%;
+                            position: relative;
+                            top: 8px;
+                            left: 0px;
+                            width: fit-content;
+                            height: fit-content;
+                        }
+
+                        span {
+                            position: relative;
+                            left: -63px;
+                            font-family: 'roboto';
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        font-size: 16px;
+        font-style: 'roboto';
+        font-weight: 500;
+        color: white;
+        width: 186px;
+        height: 50px;
+        border: #c235bbc5;
+        background: linear-gradient(193.33deg, $primary -11.44%, $secondary 123.93%);
+        border-radius: 25px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        transition: filter 1.2s ease, box-shadow 1.2s ease;
+
+        &:hover {
+            filter: brightness(1.2);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+ /****** others pages code ******/
+
+
+ 
+
+
+
+
+ /******* footer code common to all pages *******/
+ footer {
     display: flex;
     flex-direction: column;
     background-color: #353535;
-    height: 186px;
+    height: 190px;
     padding-top: 25px;
-    gap: 20px;
+    gap: 5px;
     padding-left: 25px;
-    @media (min-width: 720px) {
+    width: 100%;
+    box-sizing: border-box;
+
+    /* for desktop */
+    @media (min-width: 1024px) {
         flex-direction: row-reverse;
         box-sizing: border-box;
-        padding-right: 5%;
-        gap : 5%;
+        padding-right: 90px;
+        gap: 5%;
         height: 114px;
         padding-top: 60px;
+        width: 100%;
     }
+    /* for desktop */
+
 
     h2 {
         font-family: 'shrikhand';
@@ -439,20 +816,32 @@ footer {
         font-size: 18px;
         font-weight: 400;
         color: white;
+        width: fit-content;
+
+        /* for desktop */
+        @media (min-width: 1024px) {
+            position: relative;
+            top: -20px;
+            left: 40px;
+        }
+        /* for desktop */
     }
 
     .links {
         display: flex;
         flex-direction: column;
-        gap: 12px;
-        @media (min-width: 720px) {
+        gap: 8px;
+
+        /* for desktop */
+        @media (min-width: 1024px) {
             flex-direction: row;
             justify-content: flex-end;
             box-sizing: border-box;
             gap: 5%;
             width: 86%;
-            }
-        
+        }
+        /* for desktop*/
+
         a {
             text-decoration: none;
             color: white;
@@ -461,11 +850,13 @@ footer {
             font-weight: 500;
             font-size: 16px;
         }
+
         .links__icone {
             display: flex;
             flex-direction: row;
             gap: 10px;
             align-items: flex-start;
+
             i {
                 font-size: 14px;
                 color: #ffffff;
@@ -475,8 +866,4 @@ footer {
 }
 
 
-
-
-
-
-
+/******* footer code common to all pages *******/

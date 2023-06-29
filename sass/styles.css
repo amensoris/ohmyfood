@@ -1,14 +1,61 @@
+/*** variable code common to all page ***/
+/*** variable code common to all page ***/
+/*** header code common to all pages *****/
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
+  width: 100%;
+}
+header a {
+  text-decoration: none;
+  position: absolute;
+  left: 20px;
+  color: rgb(53, 53, 53);
 }
 header .logo {
   width: 165px;
   height: 45px;
 }
 
+/***** header code common to all pages *****/
+/****** homepage code *******/
+.body_html {
+  width: 100%;
+}
+
+.home_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+main .loader {
+  background-color: #fff;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+main .loader i {
+  font-size: 10em;
+  color: #ffffff;
+  animation: spin 7s 6 ease-in-out alternate-reverse;
+}
+main .loader i {
+  font-size: 10em;
+  color: #ffffff;
+  animation: spin-revert 7s 6 ease-in-out alternate-reverse;
+}
+main .loader .loader-text {
+  font-family: "Shrikhand";
+  font-size: 1.75em;
+  font-weight: 400;
+}
 main .index_location {
   background-color: #EAEAEA;
   display: flex;
@@ -38,6 +85,11 @@ main .index_explorer h1 {
   font-size: 24px;
   box-sizing: border-box;
   text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  main .index_explorer h1 {
+    font-size: 40px;
+  }
 }
 main .index_explorer p {
   font-family: "Roboto";
@@ -87,6 +139,10 @@ main .working h2 {
   box-sizing: border-box;
   margin-bottom: 15px;
   width: 325px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
   /* for desktop*/
   /* for desktop*/
 }
@@ -216,12 +272,12 @@ main .working .steps .enjoy i {
   color: #9356DC;
 }
 main .restaurants_list {
-  height: 1160px;
+  height: 1200px;
   background-color: #F6F6F6;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 13px;
   align-items: center;
   padding-top: 40px;
   /* for desktop*/
@@ -229,11 +285,15 @@ main .restaurants_list {
 }
 @media screen and (min-width: 1024px) {
   main .restaurants_list {
-    height: 650px;
+    height: 690px;
   }
 }
 main .restaurants_list h2 {
   width: 330px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
   /* for desktop*/
   /* for desktop*/
 }
@@ -288,8 +348,8 @@ main .restaurants_list .card_list article .fa-solid {
   left: 262px;
   font-size: 24px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: text;
   -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   opacity: 0;
   transition: opacity 500ms ease;
@@ -331,7 +391,7 @@ main .restaurants_list .card_list article a .new {
   font-size: 14px;
   color: #008766;
   position: relative;
-  top: -195px;
+  top: -250px;
   left: 240px;
   width: 80px;
   display: block;
@@ -346,7 +406,7 @@ main .restaurants_list .card_list article a .new {
 @media screen and (min-width: 1024px) {
   main .restaurants_list .card_list article a .new {
     position: relative;
-    top: -205px;
+    top: -250px;
     left: 353px;
   }
 }
@@ -360,6 +420,12 @@ main .restaurants_list .card_list article a img {
 main .restaurants_list .card_list article a .text_description {
   margin-left: 15px;
   color: black;
+  position: relative;
+  top: -18px;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  box-sizing: border-box;
 }
 main .restaurants_list .card_list article a .text_description h3 {
   font-family: "Roboto";
@@ -372,25 +438,270 @@ main .restaurants_list .card_list article a .text_description p {
   font-style: normal;
   font-weight: 300;
   font-size: 17px;
+  position: relative;
+  top: -30px;
 }
 
+/****** homepage code*******/
+/******** others pages code ********/
+.html_pages {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body_alafrancaise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.alafrancaise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.alafrancaise .presentation_pic {
+  width: 100%;
+  height: 275px;
+}
+.alafrancaise .presentation_pic img {
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.alafrancaise .menu {
+  background-color: rgb(246, 246, 246);
+  border-radius: 40px 40px 0px 0px;
+  padding-top: 10px;
+  width: 100%;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 38px;
+  height: 1250px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  .alafrancaise .menu {
+    width: 1024px;
+  }
+}
+.alafrancaise .menu h1 {
+  font-family: "shrikhand";
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: -120px;
+  width: 335px;
+}
+@media (min-width: 1024px) {
+  .alafrancaise .menu h1 {
+    position: relative;
+    left: -20px;
+  }
+}
+.alafrancaise .menu .fa-regular {
+  position: relative;
+  top: 46px;
+  left: 145px;
+  font-size: 24px;
+  width: 30px;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  .alafrancaise .menu .fa-regular {
+    position: relative;
+    top: 50px;
+    left: 136px;
+  }
+}
+.alafrancaise .menu .fa-solid {
+  position: relative;
+  top: -16px;
+  left: 147px;
+  font-size: 24px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  width: 35px;
+  /* for desktop*/
+  /* for desktop*/
+}
+@media screen and (min-width: 1024px) {
+  .alafrancaise .menu .fa-solid {
+    position: relative;
+    top: -12px;
+    left: 138.5px;
+  }
+}
+.alafrancaise .menu .fa-solid:hover {
+  opacity: 1;
+}
+.alafrancaise .menu .sub-menu {
+  box-sizing: border-box;
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .alafrancaise .menu .sub-menu {
+    width: 640px;
+    align-items: center;
+  }
+}
+.alafrancaise .menu .sub-menu h2 {
+  font-family: "roboto";
+  font-weight: 300;
+  font-size: 16px;
+  color: black;
+  border-bottom: #99E2D0 3px solid;
+  height: 22px;
+  width: 44px;
+}
+@media (min-width: 1024px) {
+  .alafrancaise .menu .sub-menu h2 {
+    position: relative;
+    left: -293px;
+  }
+}
+.alafrancaise .menu .sub-menu .dishes {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .alafrancaise .menu .sub-menu .dishes {
+    width: 640px;
+  }
+}
+.alafrancaise .menu .sub-menu .dishes .dish {
+  background-color: white;
+  border-radius: 15px;
+  width: 349px;
+  height: 70px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .alafrancaise .menu .sub-menu .dishes .dish {
+    width: 620px;
+  }
+}
+.alafrancaise .menu .sub-menu .dishes .dish:hover > .dish-confirm {
+  transform: translateX(-100%);
+}
+.alafrancaise .menu .sub-menu .dishes .dish h3 {
+  font-size: 18px;
+  font-family: "roboto";
+  font-weight: 500;
+  margin-left: 17px;
+  margin-top: 14px;
+}
+.alafrancaise .menu .sub-menu .dishes .dish p {
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+  top: -30px;
+  left: 17px;
+}
+.alafrancaise .menu .sub-menu .dishes .dish .dish-confirm {
+  width: 32px;
+  height: 100%;
+  background-color: #99E2D0;
+  position: relative;
+  top: -102px;
+  left: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 800ms ease-in-out;
+  border: #99E2D0 solid 16px;
+}
+@media screen and (min-width: 1024px) {
+  .alafrancaise .menu .sub-menu .dishes .dish .dish-confirm {
+    position: relative;
+    left: 620px;
+  }
+}
+.alafrancaise .menu .sub-menu .dishes .dish .dish-confirm .fa-circle-check {
+  color: #99E2D0;
+  background-color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  position: relative;
+  top: 8px;
+  left: 0px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.alafrancaise .menu .sub-menu .dishes .dish .dish-confirm span {
+  position: relative;
+  left: -63px;
+  font-family: "roboto";
+  font-size: 15px;
+  font-weight: 700;
+}
+.alafrancaise button {
+  font-size: 16px;
+  font-style: "roboto";
+  font-weight: 500;
+  color: white;
+  width: 186px;
+  height: 50px;
+  border: rgba(194, 53, 187, 0.7725490196);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: filter 1.2s ease, box-shadow 1.2s ease;
+}
+.alafrancaise button:hover {
+  filter: brightness(1.2);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/****** others pages code ******/
+/******* footer code common to all pages *******/
 footer {
   display: flex;
   flex-direction: column;
   background-color: #353535;
-  height: 186px;
+  height: 190px;
   padding-top: 25px;
-  gap: 20px;
+  gap: 5px;
   padding-left: 25px;
+  width: 100%;
+  box-sizing: border-box;
+  /* for desktop */
+  /* for desktop */
 }
-@media (min-width: 720px) {
+@media (min-width: 1024px) {
   footer {
     flex-direction: row-reverse;
     box-sizing: border-box;
-    padding-right: 5%;
+    padding-right: 90px;
     gap: 5%;
     height: 114px;
     padding-top: 60px;
+    width: 100%;
   }
 }
 footer h2 {
@@ -399,13 +710,26 @@ footer h2 {
   font-size: 18px;
   font-weight: 400;
   color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  /* for desktop */
+  /* for desktop */
+}
+@media (min-width: 1024px) {
+  footer h2 {
+    position: relative;
+    top: -20px;
+    left: 40px;
+  }
 }
 footer .links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
+  /* for desktop */
+  /* for desktop*/
 }
-@media (min-width: 720px) {
+@media (min-width: 1024px) {
   footer .links {
     flex-direction: row;
     justify-content: flex-end;
@@ -431,4 +755,6 @@ footer .links .links__icone {
 footer .links .links__icone i {
   font-size: 14px;
   color: #ffffff;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/******* footer code common to all pages *******//*# sourceMappingURL=styles.css.map */
