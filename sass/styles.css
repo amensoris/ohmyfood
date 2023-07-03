@@ -1,5 +1,17 @@
-/*** variable code common to all page ***/
-/*** variable code common to all page ***/
+/*** variables code ***/
+/*** variables code ***/
+/*** Mixin code ***/
+/*** Mixin code ***/
+/*** Keyframe code ***/
+@keyframes apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*** Keyframes code ***/
 /*** header code common to all pages *****/
 header {
   display: flex;
@@ -56,6 +68,12 @@ main .loader .loader-text {
   font-size: 1.75em;
   font-weight: 400;
 }
+main #localisation {
+  background-color: rgb(234, 234, 234);
+  border: none;
+  margin-left: 0px;
+  width: 100px;
+}
 main .index_location {
   background-color: #EAEAEA;
   display: flex;
@@ -85,6 +103,8 @@ main .index_explorer h1 {
   font-size: 24px;
   box-sizing: border-box;
   text-align: center;
+  /*** for desktop ***/
+  /*** for desktop ***/
 }
 @media screen and (min-width: 1024px) {
   main .index_explorer h1 {
@@ -485,8 +505,10 @@ main .restaurants_list .card_list article a .text_description p {
   flex-direction: column;
   align-items: center;
   gap: 38px;
-  height: 1250px;
+  height: 1300px;
   box-sizing: border-box;
+  /*** for desktop ***/
+  /*** for desktop ***/
 }
 @media screen and (min-width: 1024px) {
   .alafrancaise .menu {
@@ -500,6 +522,8 @@ main .restaurants_list .card_list article a .text_description p {
   font-weight: 400;
   margin-bottom: -120px;
   width: 335px;
+  /*** for desktop ***/
+  /*** for desktop ***/
 }
 @media (min-width: 1024px) {
   .alafrancaise .menu h1 {
@@ -548,11 +572,28 @@ main .restaurants_list .card_list article a .text_description p {
 .alafrancaise .menu .fa-solid:hover {
   opacity: 1;
 }
+.alafrancaise .menu #apparition1 {
+  opacity: 1;
+  animation-name: apparition;
+  animation-duration: 2000ms;
+}
+.alafrancaise .menu #apparition2 {
+  opacity: 1;
+  animation-name: apparition;
+  animation-duration: 4000ms;
+}
+.alafrancaise .menu #apparition3 {
+  opacity: 1;
+  animation-name: apparition;
+  animation-duration: 5500ms;
+}
 .alafrancaise .menu .sub-menu {
   box-sizing: border-box;
   padding-left: 12px;
   display: flex;
   flex-direction: column;
+  /*** for desktop ***/
+  /*** for desktop ***/
 }
 @media screen and (min-width: 1024px) {
   .alafrancaise .menu .sub-menu {
@@ -568,6 +609,8 @@ main .restaurants_list .card_list article a .text_description p {
   border-bottom: #99E2D0 3px solid;
   height: 22px;
   width: 44px;
+  /*** for desktop ***/
+  /*** for desktop ***/
 }
 @media (min-width: 1024px) {
   .alafrancaise .menu .sub-menu h2 {
@@ -580,22 +623,26 @@ main .restaurants_list .card_list article a .text_description p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /*** for desktop ***/
 }
 @media (min-width: 1024px) {
   .alafrancaise .menu .sub-menu .dishes {
     width: 640px;
+    /*** for desktop ***/
   }
 }
 .alafrancaise .menu .sub-menu .dishes .dish {
   background-color: white;
   border-radius: 15px;
   width: 349px;
-  height: 70px;
+  height: 78px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /*** for desktop ***/
+  /*** for desktop ***/
 }
 @media (min-width: 1024px) {
   .alafrancaise .menu .sub-menu .dishes .dish {
@@ -605,34 +652,58 @@ main .restaurants_list .card_list article a .text_description p {
 .alafrancaise .menu .sub-menu .dishes .dish:hover > .dish-confirm {
   transform: translateX(-100%);
 }
+.alafrancaise .menu .sub-menu .dishes .dish:hover > p {
+  width: 60%;
+}
+.alafrancaise .menu .sub-menu .dishes .dish:hover > h3 {
+  width: 65%;
+}
 .alafrancaise .menu .sub-menu .dishes .dish h3 {
   font-size: 18px;
   font-family: "roboto";
   font-weight: 500;
-  margin-left: 17px;
-  margin-top: 14px;
+  height: 22px;
+  width: 280px;
+  padding-top: 1px;
+  padding-bottom: 22px;
+  padding-left: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 12px;
+  transition: width 800ms ease-in-out;
 }
 .alafrancaise .menu .sub-menu .dishes .dish p {
   font-family: "roboto";
   font-size: 15px;
   font-weight: 300;
+  padding-top: 1px;
+  padding-bottom: 22px;
+  padding-left: 15px;
+  width: 280px;
+  height: 20px;
   position: relative;
-  top: -30px;
-  left: 17px;
+  top: -28px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 800ms ease-in-out;
 }
 .alafrancaise .menu .sub-menu .dishes .dish .dish-confirm {
   width: 32px;
-  height: 100%;
+  height: 70px;
   background-color: #99E2D0;
   position: relative;
-  top: -102px;
+  top: -108px;
   left: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 800ms ease-in-out;
-  border: #99E2D0 solid 16px;
+  border: #99E2D0 solid 20px;
+  /*** for desktop ***/
+  /*** for desktop ***/
 }
 @media screen and (min-width: 1024px) {
   .alafrancaise .menu .sub-menu .dishes .dish .dish-confirm {
