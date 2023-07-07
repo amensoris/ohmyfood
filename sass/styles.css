@@ -241,7 +241,7 @@ main .working .steps {
     flex-direction: row;
   }
 }
-main .working .steps .choose {
+main .working .steps .step {
   box-sizing: border-box;
   display: flex;
   justify-content: space-evenly;
@@ -252,12 +252,12 @@ main .working .steps .choose {
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
-main .working .steps .choose:hover > i {
+main .working .steps .step:hover > i {
   color: #9356DC;
 }
-main .working .steps .choose span {
+main .working .steps .step span {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -265,98 +265,21 @@ main .working .steps .choose span {
   box-sizing: border-box;
   padding-left: 6px;
   padding-top: 3px;
-  margin-left: -15%;
+  margin-left: -58px;
 }
-main .working .steps .choose p {
+main .working .steps .step p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  position: relative;
-  left: -25px;
+  width: 190px;
+  margin-left: -40px;
 }
-main .working .steps .choose i {
+main .working .steps .step i {
   position: relative;
-  left: -10px;
+  left: -20px;
   color: #7E7E7E;
-}
-main .working .steps .compose {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #F7F7F7;
-  height: 66px;
-  width: 318px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-}
-main .working .steps .compose:hover > i {
-  color: #9356DC;
-}
-main .working .steps .compose span {
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: #9356DC;
-  box-sizing: border-box;
-  padding-left: 6px;
-  padding-top: 3px;
-  margin-left: -15%;
-}
-main .working .steps .compose p {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  position: relative;
-  left: -35px;
-}
-main .working .steps .compose i {
-  position: relative;
-  left: -15px;
-  color: #7E7E7E;
-}
-main .working .steps .enjoy {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #F7F7F7;
-  height: 66px;
-  width: 318px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-}
-main .working .steps .enjoy:hover > i {
-  color: #9356DC;
-}
-main .working .steps .enjoy span {
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: #9356DC;
-  box-sizing: border-box;
-  padding-left: 6px;
-  padding-top: 3px;
-  margin-left: -15%;
-}
-main .working .steps .enjoy p {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  position: relative;
-  left: -28px;
-}
-main .working .steps .enjoy i {
-  position: relative;
-  left: -10px;
-  color: #7E7E7E;
+  font-size: 18px;
 }
 main .restaurants_list {
   height: 1200px;
@@ -538,7 +461,7 @@ main .restaurants_list .card_list article a .text_description p {
   align-items: center;
 }
 
-.body_alafrancaise {
+.body_page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -546,23 +469,23 @@ main .restaurants_list .card_list article a .text_description p {
   width: 100%;
 }
 
-.alafrancaise {
+.main_page {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.alafrancaise .presentation_pic {
+.main_page .presentation_pic {
   width: 100%;
   height: 275px;
 }
-.alafrancaise .presentation_pic img {
+.main_page .presentation_pic img {
   width: 100%;
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.alafrancaise .menu {
+.main_page .menu {
   background-color: rgb(246, 246, 246);
   border-radius: 40px 40px 0px 0px;
   padding-top: 10px;
@@ -578,11 +501,11 @@ main .restaurants_list .card_list article a .text_description p {
   /*** for desktop ***/
 }
 @media screen and (min-width: 1024px) {
-  .alafrancaise .menu {
+  .main_page .menu {
     width: 1024px;
   }
 }
-.alafrancaise .menu h1 {
+.main_page .menu h1 {
   font-family: "shrikhand";
   font-style: normal;
   font-size: 28px;
@@ -593,12 +516,12 @@ main .restaurants_list .card_list article a .text_description p {
   /*** for desktop ***/
 }
 @media (min-width: 1024px) {
-  .alafrancaise .menu h1 {
+  .main_page .menu h1 {
     position: relative;
     left: -20px;
   }
 }
-.alafrancaise .menu .fa-regular {
+.main_page .menu .fa-regular {
   position: relative;
   top: 46px;
   left: 145px;
@@ -608,13 +531,13 @@ main .restaurants_list .card_list article a .text_description p {
   /* for desktop*/
 }
 @media screen and (min-width: 1024px) {
-  .alafrancaise .menu .fa-regular {
+  .main_page .menu .fa-regular {
     position: relative;
     top: 50px;
     left: 136px;
   }
 }
-.alafrancaise .menu .fa-solid {
+.main_page .menu .fa-solid {
   position: relative;
   top: -16px;
   left: 147px;
@@ -630,31 +553,31 @@ main .restaurants_list .card_list article a .text_description p {
   /* for desktop*/
 }
 @media screen and (min-width: 1024px) {
-  .alafrancaise .menu .fa-solid {
+  .main_page .menu .fa-solid {
     position: relative;
     top: -12px;
     left: 138.5px;
   }
 }
-.alafrancaise .menu .fa-solid:hover {
+.main_page .menu .fa-solid:hover {
   opacity: 1;
 }
-.alafrancaise .menu #apparition1 {
+.main_page .menu #apparition1 {
   opacity: 1;
   animation-name: apparition;
   animation-duration: 2000ms;
 }
-.alafrancaise .menu #apparition2 {
+.main_page .menu #apparition2 {
   opacity: 1;
   animation-name: apparition;
   animation-duration: 4000ms;
 }
-.alafrancaise .menu #apparition3 {
+.main_page .menu #apparition3 {
   opacity: 1;
   animation-name: apparition;
   animation-duration: 5500ms;
 }
-.alafrancaise .menu .sub-menu {
+.main_page .menu .sub-menu {
   box-sizing: border-box;
   padding-left: 12px;
   display: flex;
@@ -663,12 +586,12 @@ main .restaurants_list .card_list article a .text_description p {
   /*** for desktop ***/
 }
 @media screen and (min-width: 1024px) {
-  .alafrancaise .menu .sub-menu {
+  .main_page .menu .sub-menu {
     width: 640px;
     align-items: center;
   }
 }
-.alafrancaise .menu .sub-menu h2 {
+.main_page .menu .sub-menu h2 {
   font-family: "roboto";
   font-weight: 300;
   font-size: 16px;
@@ -680,12 +603,12 @@ main .restaurants_list .card_list article a .text_description p {
   /*** for desktop ***/
 }
 @media (min-width: 1024px) {
-  .alafrancaise .menu .sub-menu h2 {
+  .main_page .menu .sub-menu h2 {
     position: relative;
     left: -293px;
   }
 }
-.alafrancaise .menu .sub-menu .dishes {
+.main_page .menu .sub-menu .dishes {
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -693,12 +616,12 @@ main .restaurants_list .card_list article a .text_description p {
   /*** for desktop ***/
 }
 @media (min-width: 1024px) {
-  .alafrancaise .menu .sub-menu .dishes {
+  .main_page .menu .sub-menu .dishes {
     width: 640px;
     /*** for desktop ***/
   }
 }
-.alafrancaise .menu .sub-menu .dishes .dish {
+.main_page .menu .sub-menu .dishes .dish {
   background-color: white;
   border-radius: 15px;
   width: 349px;
@@ -712,20 +635,20 @@ main .restaurants_list .card_list article a .text_description p {
   /*** for desktop ***/
 }
 @media (min-width: 1024px) {
-  .alafrancaise .menu .sub-menu .dishes .dish {
+  .main_page .menu .sub-menu .dishes .dish {
     width: 620px;
   }
 }
-.alafrancaise .menu .sub-menu .dishes .dish:hover > .dish-confirm {
+.main_page .menu .sub-menu .dishes .dish:hover > .dish-confirm {
   transform: translateX(-100%);
 }
-.alafrancaise .menu .sub-menu .dishes .dish:hover > p {
+.main_page .menu .sub-menu .dishes .dish:hover > p {
   width: 60%;
 }
-.alafrancaise .menu .sub-menu .dishes .dish:hover > h3 {
+.main_page .menu .sub-menu .dishes .dish:hover > h3 {
   width: 65%;
 }
-.alafrancaise .menu .sub-menu .dishes .dish h3 {
+.main_page .menu .sub-menu .dishes .dish h3 {
   font-size: 18px;
   font-family: "roboto";
   font-weight: 500;
@@ -740,7 +663,7 @@ main .restaurants_list .card_list article a .text_description p {
   margin-top: 12px;
   transition: width 800ms ease-in-out;
 }
-.alafrancaise .menu .sub-menu .dishes .dish p {
+.main_page .menu .sub-menu .dishes .dish p {
   font-family: "roboto";
   font-size: 15px;
   font-weight: 300;
@@ -756,7 +679,7 @@ main .restaurants_list .card_list article a .text_description p {
   white-space: nowrap;
   transition: width 800ms ease-in-out;
 }
-.alafrancaise .menu .sub-menu .dishes .dish .dish-confirm {
+.main_page .menu .sub-menu .dishes .dish .dish-confirm {
   width: 32px;
   height: 70px;
   background-color: #99E2D0;
@@ -773,12 +696,12 @@ main .restaurants_list .card_list article a .text_description p {
   /*** for desktop ***/
 }
 @media screen and (min-width: 1024px) {
-  .alafrancaise .menu .sub-menu .dishes .dish .dish-confirm {
+  .main_page .menu .sub-menu .dishes .dish .dish-confirm {
     position: relative;
     left: 620px;
   }
 }
-.alafrancaise .menu .sub-menu .dishes .dish .dish-confirm .fa-circle-check {
+.main_page .menu .sub-menu .dishes .dish .dish-confirm .fa-circle-check {
   color: #99E2D0;
   background-color: white;
   font-size: 24px;
@@ -791,16 +714,16 @@ main .restaurants_list .card_list article a .text_description p {
   height: -moz-fit-content;
   height: fit-content;
 }
-.alafrancaise .menu .sub-menu .dishes .dish .dish-confirm span {
+.main_page .menu .sub-menu .dishes .dish .dish-confirm span {
   position: relative;
   left: -63px;
   font-family: "roboto";
   font-size: 15px;
   font-weight: 700;
 }
-.alafrancaise button {
+.main_page button {
   font-size: 16px;
-  font-style: "roboto";
+  font-family: "roboto";
   font-weight: 500;
   color: white;
   width: 186px;
@@ -811,7 +734,7 @@ main .restaurants_list .card_list article a .text_description p {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   transition: filter 1.2s ease, box-shadow 1.2s ease;
 }
-.alafrancaise button:hover {
+.main_page button:hover {
   filter: brightness(1.2);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }

@@ -1,7 +1,7 @@
 /*** variables code ***/
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
+$primary:#9356DC;
+$secondary:#FF79DA;
+$tertiary:#99E2D0;
 /*** variables code ***/
 
 
@@ -17,25 +17,29 @@ $tertiary: #99E2D0;
 /*** Keyframe code ***/
 @keyframes apparition {
     from {
-            opacity: 0;   
-        }
-        50% {
-            opacity: 0.5;
-        }
-        to {
-            opacity: 1;
-        }
+        opacity: 0;
     }
 
-    
+    50% {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
 @keyframes spin {
-    0%{
+    0% {
         transform: rotate(0);
         color: $primary;
     }
+
     50% {
         color: $tertiary;
     }
+
     100% {
         transform: rotate(25deg);
         color: $primary;
@@ -45,15 +49,17 @@ $tertiary: #99E2D0;
 
 
 @keyframes spin-revert {
-    0%{
-        
+    0% {
+
         color: $primary;
     }
+
     50% {
         color: $tertiary;
     }
+
     100% {
-    
+
         color: $primary;
     }
 }
@@ -64,11 +70,11 @@ $tertiary: #99E2D0;
     0% {
         visibility: visible;
     }
+
     100% {
         visibility: visible;
     }
 }
-
 /*** Keyframes code ***/
 
 
@@ -100,7 +106,6 @@ header {
         height: 45px;
     }
 }
-
 /***** header code common to all pages *****/
 
 
@@ -116,7 +121,6 @@ header {
 
 
 /****** homepage code *******/
-
 .body_html {
     width: 100%;
 }
@@ -134,7 +138,7 @@ main {
 
     .loader {
         background-color: #fff;
-        position: fixed;     
+        position: fixed;
         z-index: 1000;
         visibility: hidden;
         animation: loading 5s;
@@ -146,38 +150,42 @@ main {
         align-items: center;
         gap: 100px;
         margin-top: -68px;
+
         .loader-elements {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap:35px;
-            .loader-element-1 {   
-                    i {
-                        font-size: 12em;
-                        color: #ffffff;
-                        animation: spin 3s 100 ease-in alternate-reverse;
-                    }
+            gap: 35px;
+
+            .loader-element-1 {
+                i {
+                    font-size: 12em;
+                    color: #ffffff;
+                    animation: spin 3s 100 ease-in alternate-reverse;
                 }
-            .loader-element-2 {
-                    
-                    i {
-                        font-size: 7em;
-                        color: black;
-                        animation: spin-revert 3s 100 ease-in alternate-reverse;
-                        position: relative;
-                        top: 55px;
-                        left: -45px;
-                    }
-                }
-        }
-        .loader-text {
-               font-family: 'Shrikhand';
-               font-style: italic;
-               font-size: 2.75em;
-               font-weight: 100;
             }
+
+            .loader-element-2 {
+
+                i {
+                    font-size: 7em;
+                    color: black;
+                    animation: spin-revert 3s 100 ease-in alternate-reverse;
+                    position: relative;
+                    top: 55px;
+                    left: -45px;
+                }
+            }
+        }
+
+        .loader-text {
+            font-family: 'Shrikhand';
+            font-style: italic;
+            font-size: 2.75em;
+            font-weight: 100;
+        }
     }
-    
+
 
     .index_location {
         background-color: #EAEAEA;
@@ -190,16 +198,18 @@ main {
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
+
         #localisation {
             background-color: rgba(234, 234, 234, 1);
-            border: none; 
+            border: none;
             margin-left: 0px;
             width: 140px;
+
             &:hover {
                 border-radius: 1px;
                 border: #EAEAEA 2px solid;
             }
-        
+
         }
     }
 
@@ -221,12 +231,12 @@ main {
             box-sizing: border-box;
             text-align: center;
 
-           /*** for desktop ***/
+            /*** for desktop ***/
             @media screen and (min-width: 1024px) {
                 font-size: 40px;
             }
             /*** for desktop ***/
-     
+
         }
 
         p {
@@ -307,7 +317,7 @@ main {
             /* for desktop*/
 
 
-            .choose {
+            .step {
                 box-sizing: border-box;
                 display: flex;
                 justify-content: space-evenly;
@@ -318,13 +328,13 @@ main {
                 border-radius: 20px;
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 
-                &:hover > i {
-                        color: $primary;     
+                &:hover>i {
+                    color: $primary;
                 }
 
                 span {
                     color: white;
-                    font-size: 12px;
+                    font-size: 14px;
                     border-radius: 50%;
                     width: 20px;
                     height: 20px;
@@ -332,7 +342,7 @@ main {
                     box-sizing: border-box;
                     padding-left: 6px;
                     padding-top: 3px;
-                    margin-left: -15%;
+                    margin-left: -58px;
                 }
 
                 p {
@@ -340,105 +350,18 @@ main {
                     font-style: normal;
                     font-weight: 500;
                     font-size: 16px;
-                    position: relative;
-                    left: -25px;
+                    width: 190px;
+                    margin-left: -40px;
+                   
                 }
 
                 i {
                     position: relative;
-                    left: -10px;
+                    left: -20px;
                     color: #7E7E7E;
+                    font-size: 18px;
                 }
-
-            }
-
-            .compose {
-                box-sizing: border-box;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                background-color: #F7F7F7;
-                height: 66px;
-                width: 318px;
-                border-radius: 20px;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-
-                &:hover > i {
-                    color: $primary;   
-            }
-
-                span {
-                    color: white;
-                    font-size: 12px;
-                    border-radius: 50%;
-                    width: 20px;
-                    height: 20px;
-                    background-color: $primary;
-                    box-sizing: border-box;
-                    padding-left: 6px;
-                    padding-top: 3px;
-                    margin-left: -15%;
-                }
-
-                p {
-                    font-family: 'Roboto';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
-                    position: relative;
-                    left: -35px;
-                }
-
-                i {
-                    position: relative;
-                    left: -15px;
-                    color: #7E7E7E;
-                }
-            }
-
-            .enjoy {
-                box-sizing: border-box;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                background-color: #F7F7F7;
-                height: 66px;
-                width: 318px;
-                border-radius: 20px;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-
-                &:hover > i {
-                    color: $primary;   
-            }
-
-                span {
-                    color: white;
-                    font-size: 12px;
-                    border-radius: 50%;
-                    width: 20px;
-                    height: 20px;
-                    background-color: $primary;
-                    box-sizing: border-box;
-                    padding-left: 6px;
-                    padding-top: 3px;
-                    margin-left: -15%;
-                }
-
-                p {
-                    font-family: 'Roboto';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
-                    position: relative;
-                    left: -28px;
-                }
-
-                i {
-                    position: relative;
-                    left: -10px;
-                    color: #7E7E7E;
-                }
-            }
+            }   
         }
     }
 
@@ -471,7 +394,7 @@ main {
                 width: 1024px;
             }
             /* for desktop*/
-        
+
         }
 
         .card_list {
@@ -495,6 +418,7 @@ main {
                 @media screen and (min-width: 1024px) {
                     width: 450px;
                 }
+
                 /* for desktop*/
 
                 .fa-regular {
@@ -509,8 +433,9 @@ main {
                         top: -57px;
                         left: 408px;
                     }
+
                     /* for desktop*/
-                
+
                 }
 
                 .fa-solid {
@@ -530,6 +455,7 @@ main {
                         top: -57px;
                         left: 380px;
                     }
+
                     /* for desktop*/
 
                     &:hover {
@@ -551,6 +477,7 @@ main {
                     @media screen and (min-width: 1024px) {
                         width: 450px;
                     }
+
                     /* for desktop*/
 
                     .new {
@@ -577,6 +504,7 @@ main {
                             top: -250px;
                             left: 353px;
                         }
+
                         /* for desktop*/
 
                     }
@@ -644,7 +572,7 @@ main {
     align-items: center;
 }
 
-.body_alafrancaise {
+.body_page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -652,7 +580,7 @@ main {
     width: 100%;
 }
 
-.alafrancaise {
+.main_page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -681,11 +609,12 @@ main {
         gap: 38px;
         height: 1300px;
         box-sizing: border-box;
-        
+
         /*** for desktop ***/
         @media screen and (min-width: 1024px) {
             width: 1024px;
         }
+
         /*** for desktop ***/
 
         h1 {
@@ -697,10 +626,11 @@ main {
             width: 335px;
 
             /*** for desktop ***/
-            @media  (min-width: 1024px) {
+            @media (min-width: 1024px) {
                 position: relative;
                 left: -20px;
             }
+
             /*** for desktop ***/
 
         }
@@ -720,6 +650,7 @@ main {
                 top: 50px;
                 left: 136px;
             }
+
             /* for desktop*/
         }
 
@@ -739,8 +670,9 @@ main {
             @media screen and (min-width: 1024px) {
                 position: relative;
                 top: -12px;
-                left: 138.5px; 
+                left: 138.5px;
             }
+
             /* for desktop*/
 
             &:hover {
@@ -753,33 +685,34 @@ main {
             animation-name: apparition;
             animation-duration: 2000ms;
         }
-        
+
         #apparition2 {
             opacity: 1;
             animation-name: apparition;
             animation-duration: 4000ms;
         }
-        
+
         #apparition3 {
             opacity: 1;
             animation-name: apparition;
             animation-duration: 5500ms;
         }
-        
-        
-        
-        
+
+
+
+
         .sub-menu {
             box-sizing: border-box;
             padding-left: 12px;
             display: flex;
             flex-direction: column;
-               
+
             /*** for desktop ***/
             @media screen and (min-width: 1024px) {
                 width: 640px;
-                align-items: center;           
+                align-items: center;
             }
+
             /*** for desktop ***/
 
             h2 {
@@ -790,12 +723,13 @@ main {
                 border-bottom: $tertiary 3px solid;
                 height: 22px;
                 width: 44px;
-                
+
                 /*** for desktop ***/
                 @media (min-width: 1024px) {
                     position: relative;
                     left: -293px;
                 }
+
                 /*** for desktop ***/
 
             }
@@ -810,7 +744,7 @@ main {
                 /*** for desktop ***/
                 @media (min-width: 1024px) {
                     width: 640px;
-                /*** for desktop ***/
+                    /*** for desktop ***/
 
                 }
 
@@ -824,11 +758,12 @@ main {
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
-                    
+
                     /*** for desktop ***/
                     @media (min-width:1024px) {
                         width: 620px;
                     }
+
                     /*** for desktop ***/
 
                     &:hover>.dish-confirm {
@@ -846,7 +781,7 @@ main {
                     h3 {
                         font-size: 18px;
                         font-family: 'roboto';
-                        font-weight: 500;                        
+                        font-weight: 500;
                         height: 22px;
                         width: 280px;
                         padding-top: 1px;
@@ -856,7 +791,7 @@ main {
                         overflow: hidden;
                         white-space: nowrap;
                         margin-top: 12px;
-                        transition: width 800ms ease-in-out;                                                    
+                        transition: width 800ms ease-in-out;
                     }
 
                     p {
@@ -873,10 +808,10 @@ main {
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
-                        transition: width 800ms ease-in-out;                                  
+                        transition: width 800ms ease-in-out;
                     }
 
-            
+
                     .dish-confirm {
                         width: 32px;
                         height: 70px;
@@ -896,6 +831,7 @@ main {
                             position: relative;
                             left: 620px;
                         }
+
                         /*** for desktop ***/
 
                         .fa-circle-check {
@@ -925,7 +861,7 @@ main {
 
     button {
         font-size: 16px;
-        font-style: 'roboto';
+        font-family: 'roboto';
         font-weight: 500;
         color: white;
         width: 186px;
@@ -943,16 +879,16 @@ main {
     }
 }
 
- /****** others pages code ******/
-
-
- 
+/****** others pages code ******/
 
 
 
 
- /******* footer code common to all pages *******/
- footer {
+
+
+
+/******* footer code common to all pages *******/
+footer {
     display: flex;
     flex-direction: column;
     background-color: #353535;
@@ -973,6 +909,7 @@ main {
         padding-top: 60px;
         width: 100%;
     }
+
     /* for desktop */
 
 
@@ -990,6 +927,7 @@ main {
             top: -20px;
             left: 40px;
         }
+
         /* for desktop */
     }
 
@@ -1006,6 +944,7 @@ main {
             gap: 5%;
             width: 86%;
         }
+
         /* for desktop*/
 
         a {
@@ -1033,4 +972,3 @@ main {
 
 
 /******* footer code common to all pages *******/
-
