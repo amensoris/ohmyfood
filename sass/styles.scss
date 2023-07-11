@@ -1,7 +1,7 @@
 /*** variables code ***/
-$primary:#9356DC;
-$secondary:#FF79DA;
-$tertiary:#99E2D0;
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
 /*** variables code ***/
 
 
@@ -10,6 +10,15 @@ $tertiary:#99E2D0;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+@mixin footer_links {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
 }
 /*** Mixin code ***/
 
@@ -29,7 +38,6 @@ $tertiary:#99E2D0;
     }
 }
 
-
 @keyframes spin {
     0% {
         transform: rotate(0);
@@ -46,9 +54,7 @@ $tertiary:#99E2D0;
     }
 }
 
-
-
-@keyframes spin-revert {
+@keyframes cup {
     0% {
 
         color: $primary;
@@ -64,14 +70,13 @@ $tertiary:#99E2D0;
     }
 }
 
-
-
 @keyframes loading {
-    0% {
-        visibility: visible;
-    }
-
+    0% {       
+        visibility: visible;    
+    } 
+    
     100% {
+        
         visibility: visible;
     }
 }
@@ -106,6 +111,7 @@ header {
         height: 45px;
     }
 }
+
 /***** header code common to all pages *****/
 
 
@@ -139,9 +145,9 @@ main {
     .loader {
         background-color: #fff;
         position: fixed;
-        z-index: 1000;
         visibility: hidden;
-        animation: loading 5s;
+        z-index: 100; 
+        animation: loading 4s ease-out;
         width: 100%;
         height: 100%;
         display: flex;
@@ -161,7 +167,7 @@ main {
                 i {
                     font-size: 12em;
                     color: #ffffff;
-                    animation: spin 3s 100 ease-in alternate-reverse;
+                    animation: spin 4s 4 ease-in alternate-reverse;
                 }
             }
 
@@ -170,7 +176,7 @@ main {
                 i {
                     font-size: 7em;
                     color: black;
-                    animation: spin-revert 3s 100 ease-in alternate-reverse;
+                    animation: cup 4s 4 ease-in alternate-reverse;
                     position: relative;
                     top: 55px;
                     left: -45px;
@@ -183,6 +189,7 @@ main {
             font-style: italic;
             font-size: 2.75em;
             font-weight: 100;
+            animation: cup 4s 4 ease-in alternate-reverse;
         }
     }
 
@@ -235,6 +242,7 @@ main {
             @media screen and (min-width: 1024px) {
                 font-size: 40px;
             }
+
             /*** for desktop ***/
 
         }
@@ -284,6 +292,7 @@ main {
         @media screen and (min-width: 1024px) {
             height: 250px;
         }
+
         /* for desktop*/
 
 
@@ -301,6 +310,7 @@ main {
             @media screen and (min-width: 1024px) {
                 width: 1024px;
             }
+
             /* for desktop*/
 
         }
@@ -314,6 +324,7 @@ main {
             @media screen and (min-width: 1024px) {
                 flex-direction: row;
             }
+
             /* for desktop*/
 
 
@@ -352,7 +363,7 @@ main {
                     font-size: 16px;
                     width: 190px;
                     margin-left: -40px;
-                   
+
                 }
 
                 i {
@@ -361,7 +372,7 @@ main {
                     color: #7E7E7E;
                     font-size: 18px;
                 }
-            }   
+            }
         }
     }
 
@@ -391,11 +402,15 @@ main {
 
             /* for desktop*/
             @media screen and (min-width: 1024px) {
-                width: 1024px;
-            }
+                width: 1024px;}
             /* for desktop*/
 
-        }
+            /* for tablet*/
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                 width: 768px;
+                 padding-left: 450px;}
+             /* for tablet*/    
+    }
 
         .card_list {
             display: flex;
@@ -407,34 +422,37 @@ main {
                 width: 1024px;
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 48px 120px;
-            }
+                gap: 48px 120px;}
             /* for desktop*/
+
+            /* for tablet*/
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+                 width: 768px;
+                 align-items: center;}
+            /* for tablet*/
 
             article {
                 height: 237px;
 
-                /* for desktop*/
-                @media screen and (min-width: 1024px) {
+                /* for desktop and tablet*/
+                @media screen and (min-width: 768px) {
                     width: 450px;
                 }
-
-                /* for desktop*/
-
+                /* for desktop and tablet */
+               
                 .fa-regular {
                     position: relative;
                     top: -57px;
                     left: 290px;
                     font-size: 24px;
 
-                    /* for desktop*/
-                    @media screen and (min-width: 1024px) {
+                    /* for desktop and tablet */
+                    @media screen and (min-width: 768px) {
                         position: relative;
                         top: -57px;
                         left: 408px;
                     }
-
-                    /* for desktop*/
+                    /* for desktop and tablet */
 
                 }
 
@@ -449,14 +467,13 @@ main {
                     opacity: 0;
                     transition: opacity 500ms ease;
 
-                    /* for desktop*/
-                    @media screen and (min-width: 1024px) {
+                    /* for desktop and tablte */
+                    @media screen and (min-width: 768px) {
                         position: relative;
                         top: -57px;
                         left: 380px;
                     }
-
-                    /* for desktop*/
+                    /* for desktop and tablet */
 
                     &:hover {
                         opacity: 1;
@@ -473,12 +490,11 @@ main {
                     text-decoration: none;
                     box-sizing: border-box;
 
-                    /* for desktop*/
-                    @media screen and (min-width: 1024px) {
+                    /* for desktop and tablet */
+                    @media screen and (min-width: 768px) {
                         width: 450px;
                     }
-
-                    /* for desktop*/
+                    /* for desktop and tablet */
 
                     .new {
                         text-decoration: none;
@@ -498,14 +514,13 @@ main {
                         background-color: #99E2D0;
                         border-radius: 3px;
 
-                        /* for desktop*/
-                        @media screen and (min-width: 1024px) {
+                        /* for desktop and tablet */
+                        @media screen and (min-width: 768px) {
                             position: relative;
                             top: -250px;
                             left: 353px;
                         }
-
-                        /* for desktop*/
+                        /* for desktop and tablet */
 
                     }
 
@@ -525,7 +540,6 @@ main {
                         flex-direction: column;
                         height: 80px;
                         box-sizing: border-box;
-
 
                         h3 {
                             font-family: 'Roboto';
@@ -614,7 +628,6 @@ main {
         @media screen and (min-width: 1024px) {
             width: 1024px;
         }
-
         /*** for desktop ***/
 
         h1 {
@@ -630,12 +643,8 @@ main {
                 position: relative;
                 left: -20px;
             }
-
             /*** for desktop ***/
-
         }
-
-
 
         .fa-regular {
             position: relative;
@@ -650,7 +659,6 @@ main {
                 top: 50px;
                 left: 136px;
             }
-
             /* for desktop*/
         }
 
@@ -672,7 +680,6 @@ main {
                 top: -12px;
                 left: 138.5px;
             }
-
             /* for desktop*/
 
             &:hover {
@@ -698,21 +705,17 @@ main {
             animation-duration: 5500ms;
         }
 
-
-
-
         .sub-menu {
             box-sizing: border-box;
             padding-left: 12px;
             display: flex;
             flex-direction: column;
 
-            /*** for desktop ***/
-            @media screen and (min-width: 1024px) {
+            /*** for desktop and tablet ***/
+            @media screen and (min-width: 768px) {
                 width: 640px;
                 align-items: center;
             }
-
             /*** for desktop ***/
 
             h2 {
@@ -724,29 +727,26 @@ main {
                 height: 22px;
                 width: 44px;
 
-                /*** for desktop ***/
-                @media (min-width: 1024px) {
+                /*** for desktop and tablet***/
+                @media (min-width: 768px) {
                     position: relative;
                     left: -293px;
                 }
-
                 /*** for desktop ***/
 
             }
 
             .dishes {
-
                 width: 350px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
 
-                /*** for desktop ***/
-                @media (min-width: 1024px) {
+                /*** for desktop and tablet***/
+                @media (min-width: 768px) {
                     width: 640px;
-                    /*** for desktop ***/
-
                 }
+                /*** for desktop ***/
 
                 .dish {
                     background-color: white;
@@ -759,11 +759,9 @@ main {
                     flex-direction: column;
                     overflow: hidden;
 
-                    /*** for desktop ***/
-                    @media (min-width:1024px) {
-                        width: 620px;
-                    }
-
+                    /*** for desktop and tablet ***/
+                    @media (min-width: 768px) {
+                        width: 620px;}
                     /*** for desktop ***/
 
                     &:hover>.dish-confirm {
@@ -826,12 +824,11 @@ main {
                         transition: all 800ms ease-in-out;
                         border: $tertiary solid 20px;
 
-                        /*** for desktop ***/
-                        @media screen and (min-width: 1024px) {
+                        /*** for desktop and tablet***/
+                        @media screen and (min-width: 768px) {
                             position: relative;
                             left: 620px;
                         }
-
                         /*** for desktop ***/
 
                         .fa-circle-check {
@@ -893,25 +890,19 @@ footer {
     flex-direction: column;
     background-color: #353535;
     height: 190px;
-    padding-top: 25px;
-    gap: 5px;
+    padding-top: 5px;
     padding-left: 25px;
     width: 100%;
     box-sizing: border-box;
 
-    /* for desktop */
-    @media (min-width: 1024px) {
+    /* for tablet and desktop */
+    @media (min-width: 768px) {
+        height: 120px;
         flex-direction: row-reverse;
-        box-sizing: border-box;
-        padding-right: 90px;
-        gap: 5%;
-        height: 114px;
-        padding-top: 60px;
-        width: 100%;
+        padding-right: 50px;
+        gap: 100px;
     }
-
-    /* for desktop */
-
+    /* for tablet and desktop */
 
     h2 {
         font-family: 'shrikhand';
@@ -919,16 +910,14 @@ footer {
         font-size: 18px;
         font-weight: 400;
         color: white;
-        width: fit-content;
-
-        /* for desktop */
-        @media (min-width: 1024px) {
+        width: 110px;
+        
+        /* for tablet and desktop */
+        @media (min-width: 768px) {
             position: relative;
-            top: -20px;
-            left: 40px;
+            top: 40px;     
         }
-
-        /* for desktop */
+        /* for tablet and desktop */
     }
 
     .links {
@@ -936,39 +925,41 @@ footer {
         flex-direction: column;
         gap: 8px;
 
-        /* for desktop */
-        @media (min-width: 1024px) {
+        /* for tablet and desktop */
+        @media (min-width: 768px) {
             flex-direction: row;
-            justify-content: flex-end;
-            box-sizing: border-box;
-            gap: 5%;
-            width: 86%;
+            align-items: center;
+            gap: 57px;
         }
+        /* for tablet and desktop */
 
-        /* for desktop*/
-
-        a {
-            text-decoration: none;
-            color: white;
-            font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-        }
-
-        .links__icone {
+        .links_icone , .links_noicone  {
             display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+            top: 10px;
+
+    
+        /* for tablet and desktop */
+        @media (min-width: 768px) {
             flex-direction: row;
-            gap: 10px;
-            align-items: flex-start;
+            align-items: center;
+            gap: 18px;
+        }
+        /* for tablet and desktop */
 
             i {
                 font-size: 14px;
                 color: #ffffff;
+                width: 22px
+            }
+
+            a {
+                @include footer_links;
             }
         }
     }
 }
-
 
 /******* footer code common to all pages *******/

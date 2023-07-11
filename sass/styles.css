@@ -27,7 +27,7 @@
     color: #9356DC;
   }
 }
-@keyframes spin-revert {
+@keyframes cup {
   0% {
     color: #9356DC;
   }
@@ -85,9 +85,9 @@ main {
 main .loader {
   background-color: #fff;
   position: fixed;
-  z-index: 1000;
   visibility: hidden;
-  animation: loading 5s;
+  z-index: 100;
+  animation: loading 4s ease-out;
   width: 100%;
   height: 100%;
   display: flex;
@@ -106,12 +106,12 @@ main .loader .loader-elements {
 main .loader .loader-elements .loader-element-1 i {
   font-size: 12em;
   color: #ffffff;
-  animation: spin 3s 100 ease-in alternate-reverse;
+  animation: spin 4s 4 ease-in alternate-reverse;
 }
 main .loader .loader-elements .loader-element-2 i {
   font-size: 7em;
   color: black;
-  animation: spin-revert 3s 100 ease-in alternate-reverse;
+  animation: cup 4s 4 ease-in alternate-reverse;
   position: relative;
   top: 55px;
   left: -45px;
@@ -121,6 +121,7 @@ main .loader .loader-text {
   font-style: italic;
   font-size: 2.75em;
   font-weight: 100;
+  animation: cup 4s 4 ease-in alternate-reverse;
 }
 main .index_location {
   background-color: #EAEAEA;
@@ -306,10 +307,18 @@ main .restaurants_list h2 {
   font-size: 24px;
   /* for desktop*/
   /* for desktop*/
+  /* for tablet*/
+  /* for tablet*/
 }
 @media screen and (min-width: 1024px) {
   main .restaurants_list h2 {
     width: 1024px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main .restaurants_list h2 {
+    width: 768px;
+    padding-left: 450px;
   }
 }
 main .restaurants_list .card_list {
@@ -318,6 +327,8 @@ main .restaurants_list .card_list {
   gap: 15px;
   /* for desktop*/
   /* for desktop*/
+  /* for tablet*/
+  /* for tablet*/
 }
 @media screen and (min-width: 1024px) {
   main .restaurants_list .card_list {
@@ -327,12 +338,18 @@ main .restaurants_list .card_list {
     gap: 48px 120px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main .restaurants_list .card_list {
+    width: 768px;
+    align-items: center;
+  }
+}
 main .restaurants_list .card_list article {
   height: 237px;
-  /* for desktop*/
-  /* for desktop*/
+  /* for desktop and tablet*/
+  /* for desktop and tablet */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   main .restaurants_list .card_list article {
     width: 450px;
   }
@@ -342,10 +359,10 @@ main .restaurants_list .card_list article .fa-regular {
   top: -57px;
   left: 290px;
   font-size: 24px;
-  /* for desktop*/
-  /* for desktop*/
+  /* for desktop and tablet */
+  /* for desktop and tablet */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   main .restaurants_list .card_list article .fa-regular {
     position: relative;
     top: -57px;
@@ -363,10 +380,10 @@ main .restaurants_list .card_list article .fa-solid {
   color: transparent;
   opacity: 0;
   transition: opacity 500ms ease;
-  /* for desktop*/
-  /* for desktop*/
+  /* for desktop and tablte */
+  /* for desktop and tablet */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   main .restaurants_list .card_list article .fa-solid {
     position: relative;
     top: -57px;
@@ -385,10 +402,10 @@ main .restaurants_list .card_list article a {
   border-radius: 20px;
   text-decoration: none;
   box-sizing: border-box;
-  /* for desktop*/
-  /* for desktop*/
+  /* for desktop and tablet */
+  /* for desktop and tablet */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   main .restaurants_list .card_list article a {
     width: 450px;
   }
@@ -410,10 +427,10 @@ main .restaurants_list .card_list article a .new {
   text-align: center;
   background-color: #99E2D0;
   border-radius: 3px;
-  /* for desktop*/
-  /* for desktop*/
+  /* for desktop and tablet */
+  /* for desktop and tablet */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   main .restaurants_list .card_list article a .new {
     position: relative;
     top: -250px;
@@ -582,10 +599,10 @@ main .restaurants_list .card_list article a .text_description p {
   padding-left: 12px;
   display: flex;
   flex-direction: column;
-  /*** for desktop ***/
+  /*** for desktop and tablet ***/
   /*** for desktop ***/
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .main_page .menu .sub-menu {
     width: 640px;
     align-items: center;
@@ -599,10 +616,10 @@ main .restaurants_list .card_list article a .text_description p {
   border-bottom: #99E2D0 3px solid;
   height: 22px;
   width: 44px;
-  /*** for desktop ***/
+  /*** for desktop and tablet***/
   /*** for desktop ***/
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .main_page .menu .sub-menu h2 {
     position: relative;
     left: -293px;
@@ -613,12 +630,12 @@ main .restaurants_list .card_list article a .text_description p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /*** for desktop and tablet***/
   /*** for desktop ***/
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .main_page .menu .sub-menu .dishes {
     width: 640px;
-    /*** for desktop ***/
   }
 }
 .main_page .menu .sub-menu .dishes .dish {
@@ -631,10 +648,10 @@ main .restaurants_list .card_list article a .text_description p {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /*** for desktop ***/
+  /*** for desktop and tablet ***/
   /*** for desktop ***/
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .main_page .menu .sub-menu .dishes .dish {
     width: 620px;
   }
@@ -692,10 +709,10 @@ main .restaurants_list .card_list article a .text_description p {
   align-items: center;
   transition: all 800ms ease-in-out;
   border: #99E2D0 solid 20px;
-  /*** for desktop ***/
+  /*** for desktop and tablet***/
   /*** for desktop ***/
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .main_page .menu .sub-menu .dishes .dish .dish-confirm {
     position: relative;
     left: 620px;
@@ -746,23 +763,19 @@ footer {
   flex-direction: column;
   background-color: #353535;
   height: 190px;
-  padding-top: 25px;
-  gap: 5px;
+  padding-top: 5px;
   padding-left: 25px;
   width: 100%;
   box-sizing: border-box;
-  /* for desktop */
-  /* for desktop */
+  /* for tablet and desktop */
+  /* for tablet and desktop */
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   footer {
+    height: 120px;
     flex-direction: row-reverse;
-    box-sizing: border-box;
-    padding-right: 90px;
-    gap: 5%;
-    height: 114px;
-    padding-top: 60px;
-    width: 100%;
+    padding-right: 50px;
+    gap: 100px;
   }
 }
 footer h2 {
@@ -771,51 +784,58 @@ footer h2 {
   font-size: 18px;
   font-weight: 400;
   color: white;
-  width: -moz-fit-content;
-  width: fit-content;
-  /* for desktop */
-  /* for desktop */
+  width: 110px;
+  /* for tablet and desktop */
+  /* for tablet and desktop */
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   footer h2 {
     position: relative;
-    top: -20px;
-    left: 40px;
+    top: 40px;
   }
 }
 footer .links {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  /* for desktop */
-  /* for desktop*/
+  /* for tablet and desktop */
+  /* for tablet and desktop */
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   footer .links {
     flex-direction: row;
-    justify-content: flex-end;
-    box-sizing: border-box;
-    gap: 5%;
-    width: 86%;
+    align-items: center;
+    gap: 57px;
   }
 }
-footer .links a {
+footer .links .links_icone, footer .links .links_noicone {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  top: 10px;
+  /* for tablet and desktop */
+  /* for tablet and desktop */
+}
+@media (min-width: 768px) {
+  footer .links .links_icone, footer .links .links_noicone {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+  }
+}
+footer .links .links_icone i, footer .links .links_noicone i {
+  font-size: 14px;
+  color: #ffffff;
+  width: 22px;
+}
+footer .links .links_icone a, footer .links .links_noicone a {
   text-decoration: none;
   color: white;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-}
-footer .links .links__icone {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: flex-start;
-}
-footer .links .links__icone i {
-  font-size: 14px;
-  color: #ffffff;
 }
 
 /******* footer code common to all pages *******//*# sourceMappingURL=styles.css.map */
